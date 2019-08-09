@@ -15,7 +15,7 @@ import { initializeAutoAttach } from './autoAttach';
 export function activate(context: vscode.ExtensionContext) {
 
 	// register a configuration provider
-	context.subscriptions.push(vscode.debug.registerDebugConfigurationProvider('node', new NodeConfigurationProvider(context)));
+	context.subscriptions.push(vscode.debug.registerDebugConfigurationProvider('deno', new NodeConfigurationProvider(context)));
 
 	// auto attach
 	initializeAutoAttach(context);
